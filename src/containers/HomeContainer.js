@@ -8,6 +8,7 @@ export default class HomeContainer extends Component {
         navigateToProfile={() => this.props.navigation.navigate('ProfileContainer')}
         navigateToChat={() => this.props.navigation.navigate('ChatContainer')}
         navigateToNotifications={() => this.props.navigation.navigate('NotificationsContainer')}
+        navigateToSetOpenPlace={() => this.props.navigation.navigate('SetOpenPlaceContainer')}
       />
     );
   }

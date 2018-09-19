@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { View, StatusBar, StyleSheet } from 'react-native'
 import { Container, Fab } from 'native-base'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { createStackNavigator } from 'react-navigation';
 
 import MainHeader from '../particles/MainHeader'
 import SearchBar from '../particles/SearchBar'
@@ -29,7 +28,7 @@ export default class Home extends Component {
           containerStyle={{ }}
           style={{ backgroundColor: '#2c8dfe' }}
           position="bottomRight"
-          onPress={() => this.props.navigation.navigate('ProfileContainer')}>
+          onPress={this.props.navigateToSetOpenPlace}>
           <Icon name="plus" />
         </Fab>
         <View style={styles.container}>
