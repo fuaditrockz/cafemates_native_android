@@ -10,6 +10,7 @@
     "native-base": "^2.8.0",
     "react": "16.5.0",
     "react-native": "0.57.0",
+    "react-native-grid-component": "^1.1.0",
     "react-native-maps": "^0.21.0",
     "react-native-rescomponent": "^1.0.4",
     "react-native-vector-icons": "^5.0.0",
