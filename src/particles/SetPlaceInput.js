@@ -3,10 +3,31 @@ import { StyleSheet, TouchableWithoutFeedback, View, FlatList } from 'react-nati
 import { Badge, Text } from 'native-base'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
+import SearchPlaceModal from './Modal/SearchPlaceModal'
+
 class SetPlaceInput extends Component {
+  constructor() {
+    super()
+    this.state = {
+      modalVisible: false
+    }
+  }
+
+  setModalVisible(visible) {
+    this.setState({modalVisible: visible});
+  }
+
   render() {
     return (
       <View style={styles.container}>
+        <SearchPlaceModal
+          modalVisible={this.state.modalVisible} 
+          closeModal={
+            () => {
+              this.setModalVisible(!this.state.modalVisible);
+            }
+          }
+        />
         <View style={styles.tagPlaceContainer}>
           <FlatList
             data={this.props.dataPlaces}
@@ -20,7 +41,11 @@ class SetPlaceInput extends Component {
             horizontal={true}
           />
         </View>
-        <TouchableWithoutFeedback>
+        <TouchableWithoutFeedback
+          onPress={() => {
+            this.setModalVisible(true);
+          }}
+        >
           <View style={styles.inputPlaceContainer}>
             <View style={{ marginRight: 10 }}>
               <Icon name='map-marker' color='#50e3c2' size={20} />
@@ -30,6 +55,25 @@ class SetPlaceInput extends Component {
             </View>
           </View>
         </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback>
+          <ButtonSet />
+        </TouchableWithoutFeedback>
+      </View>
+    )
+  }
+}
+
+class ButtonSet extends Component {
+  render() {
+    return (
+      <View 
+        style={{
+          backgroundColor: '#2c8dfe', 
+          justifyContent: 'center', 
+          alignItems: 'center',
+          height: 55
+        }}>
+        <Text style={{ color: '#fff', fontWeight: 'bold', fontSize: 18 }}>Set Your Place Now</Text>
       </View>
     )
   }
@@ -38,8 +82,7 @@ class SetPlaceInput extends Component {
 const styles = StyleSheet.create({
   container: {
     width: '100%', 
-    minHeight: 50, 
-    backgroundColor: '#fff',
+    minHeight: 50,
     position: 'absolute',
     bottom: 0
   },
@@ -68,6 +111,4 @@ const styles = StyleSheet.create({
   }
 })
 
-module.exports = {
-  SetPlaceInput
-}
+export default SetPlaceInput

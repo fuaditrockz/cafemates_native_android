@@ -3,7 +3,7 @@ import { StatusBar, StyleSheet } from 'react-native'
 import { Container, Content, Form, Textarea } from 'native-base'
 
 import RegularHeader from '../particles/RegularHeader'
-import { SetPlaceInput } from '../particles/OpenPlaceParticles'
+import SetPlaceInput from '../particles/SetPlaceInput'
 
 export default class SetOpenPlace extends Component {
   render() {
@@ -46,7 +46,6 @@ export default class SetOpenPlace extends Component {
             }
           ]}
         />
-        
       </Container>
     )
   }
