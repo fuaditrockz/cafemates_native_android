@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { StatusBar, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { Container, Content, Form, Textarea } from 'native-base'
 
 import RegularHeader from '../particles/RegularHeader'
 import SetPlaceInput from '../particles/SetPlaceInput'
+import { StatusBarWhite } from '../particles/StatusBarParticles'
 
 export default class SetOpenPlace extends Component {
   render() {
@@ -13,10 +14,7 @@ export default class SetOpenPlace extends Component {
           title='Set Open Place'
           backToMain={this.props.backToMain}
         />
-        <StatusBar
-          barStyle="dark-content"
-          backgroundColor="#fff"
-        />
+        <StatusBarWhite />
         <Content padder>
           <Form>
             <Textarea 
@@ -53,6 +51,7 @@ export default class SetOpenPlace extends Component {
 
 const styles = StyleSheet.create({
   textContainer: {
-    fontSize: 22
+    fontSize: 22,
+    height: 150
   }
 })

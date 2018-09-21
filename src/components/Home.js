@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import { View, StatusBar, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { Container, Fab } from 'native-base'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import MainHeader from '../particles/MainHeader'
 import SearchBar from '../particles/SearchBar'
 import MapCafemates from '../particles/MapV1/MapCafemates'
+import { StatusBarWhite } from '../particles/StatusBarParticles'
 
 export default class Home extends Component {
   render() {
@@ -18,10 +19,7 @@ export default class Home extends Component {
           navigateToChat={this.props.navigateToChat}
           navigateToNotifications={this.props.navigateToNotifications}
         />
-        <StatusBar
-          barStyle="dark-content"
-          backgroundColor="#fff"
-        />
+        <StatusBarWhite />
         <SearchBar/>
         <Fab
           active={true}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableWithoutFeedback, Image } from 'react-native'
-import { Thumbnail, Badge, Text as NativeBaseText } from 'native-base';
+import { Thumbnail } from 'native-base';
 import Grid from 'react-native-grid-component';
 
 class NotificationsConfirmed extends Component {

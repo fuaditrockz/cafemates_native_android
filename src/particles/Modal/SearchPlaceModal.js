@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Modal, View, Text, TouchableWithoutFeedback, StyleSheet, ScrollView } from 'react-native'
 import { Header, Left, Body, Right, Button, Title, Thumbnail } from 'native-base'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import { responsiveWidth, responsiveHeight, responsiveSize } from 'react-native-rescomponent'
 
 import SearchBar from '../SearchBar'
 
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   cardContainer: {
-    height: 55,
+    height: responsiveHeight(9),
     backgroundColor: '#fff',
     flexDirection: 'row',
     paddingVertical: 10,

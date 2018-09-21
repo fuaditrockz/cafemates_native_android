@@ -1,6 +1,7 @@
-import image1 from './poto1.png'
-import image2 from './poto2.png'
-import image3 from './poto3.png'
+import image1 from './cewek1.png'
+import image2 from './cewek2.png'
+import image3 from './cewek3.png'
+import image4 from './cewek4.png'
 
 exports.data = [
   {
@@ -52,7 +53,7 @@ exports.data = [
     id: 4,
     quotes: "Kuras otak, abis itu kuras peler nya om om.",
     avatar: "https://carijodohgratis.com/wp-content/uploads/2017/06/vira-cewek-single-cantik-19-tahun-cari-teman-01.jpg",
-    avatarThumbnail: image2,
+    avatarThumbnail: image4,
     firstname: "Gita",
     lastname: "Sulistya",
     age: 20,

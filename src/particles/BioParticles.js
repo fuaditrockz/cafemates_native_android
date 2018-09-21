@@ -82,10 +82,79 @@ class Favorites extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.iconContainer}>
-          <Icon name='heart' size={18}/>
+          <Icon name='chart-bubble' size={18}/>
         </View>
         <View style={styles.totalContainer}>
           <Text style={styles.result}>{this.props.favorites}</Text>
+        </View>
+      </View>
+    )
+  }
+}
+
+class Lived extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.iconContainer}>
+          <Icon name='map-marker' size={18}/>
+        </View>
+        <View>
+          <Text>Current City </Text>
+        </View>
+        <View>
+          <Text style={styles.result}>{this.props.city}</Text>
+        </View>
+      </View>
+    )
+  }
+}
+
+class Religion extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.iconContainer}>
+          <Icon name='star' size={18}/>
+        </View>
+        <View>
+          <Text style={styles.result}>{this.props.religion}</Text>
+        </View>
+      </View>
+    )
+  }
+}
+
+class Gender extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.iconContainer}>
+          <Icon name='star' size={18}/>
+        </View>
+        <View>
+          <Text>Gender is </Text>
+        </View>
+        <View>
+          <Text style={styles.result}>{this.props.gender}</Text>
+        </View>
+      </View>
+    )
+  }
+}
+
+class Interested extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.iconContainer}>
+          <Icon name='heart' size={18}/>
+        </View>
+        <View>
+          <Text>Interested in </Text>
+        </View>
+        <View>
+          <Text style={styles.result}>{this.props.interested}</Text>
         </View>
       </View>
     )
@@ -106,5 +175,12 @@ const styles = StyleSheet.create({
 })
 
 module.exports = {
-  Job, BirthDay, School, Match, Favorites
+  Job, 
+  BirthDay, 
+  School, 
+  Match, 
+  Favorites, 
+  Lived, 
+  Religion, 
+  Gender, Interested
 }
