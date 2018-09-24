@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Modal, View, Text, TouchableWithoutFeedback, StyleSheet, ScrollView } from 'react-native'
+import { Modal, View, Text, TouchableWithoutFeedback, StyleSheet, ScrollView, BackHandler } from 'react-native'
 import { Header, Left, Body, Right, Button, Title } from 'native-base'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
@@ -28,15 +28,14 @@ class ModalHeader extends Component {
 }
 
 export default class ProfileDetailModal extends Component {
+
   render() {
     return (
       <Modal
         animationType="slide"
         transparent={false}
         visible={this.props.modalVisible}
-        onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
-        }}>
+        onRequestClose={this.props.handleBackModal}>
         <View>
           <ModalHeader 
             closeModal={this.props.closeModal}

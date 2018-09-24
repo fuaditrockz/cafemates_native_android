@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import Chat from '../components/Chat'
+import ChatRoom from '../components/ChatRoom'
 
 export default class ChatContainer extends Component {
   render() {
     return (
-      <Chat 
+      <ChatRoom 
         backToMain={() => this.props.navigation.goBack()}
-        navigateToChatRoom={() => this.props.navigation.navigate('ChatRoomContainer')}
       />
     )
   }

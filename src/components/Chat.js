@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
+import { ScrollView , TouchableOpacity} from 'react-native'
 import { Container } from 'native-base'
 
 import RegularHeader from '../particles/RegularHeader'
@@ -20,9 +20,10 @@ export default class Chat extends Component {
           <ChatCard 
             avatar='https://s.kaskus.id/images/2018/06/15/10241338_20180615093427.jpg'
             name='Diana Afrita'
-            chat='Kalau gitu sih gausah ngentot aja, susah amat! Basi lu.'
+            chat='Kalau gitu sih gausah ngentot lu.'
             time='12:00 PM'
             totalNotif={3}
+            navigateToChatRoom={this.props.navigateToChatRoom}
           />
           <ChatCard 
             avatar='https://s.kaskus.id/images/2018/06/15/10241338_20180615093427.jpg'

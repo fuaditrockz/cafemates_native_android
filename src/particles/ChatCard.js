@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, TouchableWithoutFeedback } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import { Thumbnail, Badge, Text as NativeBaseText } from 'native-base';
 
 export default class ChatCard extends Component {
   render() {
     return (
-      <TouchableWithoutFeedback>
+      <TouchableOpacity onPress={this.props.navigateToChatRoom}>
         <View style={styles.container}>
           <View style={styles.avatarContainer}>
             <Thumbnail source={{ uri: this.props.avatar }} small/>
@@ -24,7 +24,7 @@ export default class ChatCard extends Component {
             </Badge>
           </View>
         </View>
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     )
   }
 }

@@ -13,9 +13,7 @@ export default class SearchPlaceModal extends Component {
         animationType="slide"
         transparent={false}
         visible={this.props.modalVisible}
-        onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
-        }}>
+        onRequestClose={this.props.handleBackModal}>
         <View>
           <Header style={styles.container}>
             <Left>

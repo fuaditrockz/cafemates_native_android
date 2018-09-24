@@ -22,11 +22,12 @@ class SetPlaceInput extends Component {
       <View style={styles.container}>
         <SearchPlaceModal
           modalVisible={this.state.modalVisible} 
-          closeModal={
-            () => {
-              this.setModalVisible(!this.state.modalVisible);
-            }
-          }
+          closeModal={() => {
+            this.setModalVisible(!this.state.modalVisible);
+          }}
+          handleBackModal={() => {
+            this.setModalVisible(!this.state.modalVisible);
+          }}
         />
         <View style={styles.tagPlaceContainer}>
           <FlatList

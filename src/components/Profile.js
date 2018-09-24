@@ -29,6 +29,7 @@ export default class Profile extends Component {
 				<ProfileDetailModal 
 					modalVisible={this.state.modalVisible}
 					closeModal={() => this.setModalVisible(!this.state.modalVisible)}
+					handleBackModal={() => this.setModalVisible(!this.state.modalVisible)}
 				/>
 				<ScrollView style={styles.container}>
 					<View style={styles.bannerContainer}>

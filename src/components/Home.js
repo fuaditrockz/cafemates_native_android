@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import { View, StyleSheet } from 'react-native'
 import { Container, Fab } from 'native-base'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
@@ -9,6 +9,7 @@ import MapCafemates from '../particles/MapV1/MapCafemates'
 import { StatusBarWhite } from '../particles/StatusBarParticles'
 
 export default class Home extends Component {
+
   render() {
     return (
       <Container>

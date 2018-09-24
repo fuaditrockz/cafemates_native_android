@@ -1,5 +1,7 @@
 package com.cafemates;
 
+import android.os.Bundle;
+
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
@@ -13,3 +15,4 @@ public class MainActivity extends ReactActivity {
         return "Cafemates";
     }
 }
+
